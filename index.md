@@ -11,8 +11,8 @@ CD
 
 LS
 ![Image](lsSectionLab1.PNG)
-1.
-2.
+1. no argument, i was in the messages directory when i ran this so the output was a list of the text files with "hello world" in a couple different languages because those were the files within the messages directory, and the ls command lists the contents in a directory, so this is not an error!
+2. directory, 
 3.
 CAT
 ![Image](catsectionlab1.PNG)
