@@ -6,7 +6,7 @@ LAB REPORT 1
 
 CD
 ![Image](cdSectionLab1.PNG)
-![Image](Screenshot2023-10-17at8.31.03AM.PNG)
+![Image](cdEmptyArglab1.png)
 
 1. no argument, working directory was simply the home directory because i was working within there, because there was no argument the directory was never changed because i didnt tell the program what directory to switch to, this is not an error! However, when I cd to lecture1, then ran cd w no argument it simply backed up one level to the home directory. this is not an error. 
 2. run w directory, when the command was run i changed the directory from simply the repository to lecture1, my output was that i was working within the lecture1 directory as evidenced by my next command line. this makes sense because id told the program to work within the lecture1 directory, this is not an error!
