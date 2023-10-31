@@ -50,8 +50,12 @@ below is my code for StringServer!
 
 PART 2
 ![Image](LabReport2SCPrivLogin.png)
+![Image](lsForprivSSHKey.png)
 ![Image](LabReport2SCPublicLogin.png)
+![Image](lsForPubSSHKey.png)
 ![Image](LabReport2SCLogin.png)
+
+I added the ls commands in terminal- it didn't print out the whole path, but the TA told me to pwd, then ls the file to show that it is there and present in that absolute file path!
 
 PART 3
 I didn't know that you could remotely connect to a computer, that was new to me. My understanding for the most part was that we run things from the coputer we are physically on, so learning how to do that conceptually was cool. I suppose, specifically the ssh command and the process of logging into my cs15l account
