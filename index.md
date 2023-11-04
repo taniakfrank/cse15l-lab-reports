@@ -145,6 +145,7 @@ This command prints out the full path name of the file when used with the -name 
 
 -size
 SOURCE: https://www.liquidweb.com/kb/how-to-use-the-find-command-in-linux/#:~:text=Find%20a%20File%20or%20Directory,iname%20for%20case%20insensitive%20checks).&text=Here%20you%20use%20a%20period,to%20represent%20the%20current%20directory. 
+
 `taniafrank@Tanias-Air docsearch % find . -size -1
 ./countingfiles.txt
 taniafrank@Tanias-Air docsearch % find . -size +400
