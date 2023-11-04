@@ -89,15 +89,12 @@ The symptom, as the output of running the tests (provide it as a screenshot of r
 ![Image](ArrayBugFailureLab3Report.png)
 The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
 Before
-
-  `static void reverseInPlace(int[] arr) {
+`static void reverseInPlace(int[] arr) {
     int[] newArray = arr;
     for(int i = 0; i < arr.length; i += 1) {
       arr[i] = newArray[arr.length - i - 1];
     }
-    
   }`
-  
   
 After
 `static void reverseInPlace(int[] arr) {
@@ -108,7 +105,6 @@ After
     for(int i = 0; i < arr.length; i +=1){
       arr[i] = newArray[i];
     }
-    
   }`
   
 This fixes the problem because in the old version its trying to assign values from the array that hasn't been set yet to the old one. In this change I copy the values in the old array to the new one, reversed. Then copy it back. You can't do it all in one step because we need access to values on the flip side of the array.
