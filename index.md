@@ -65,11 +65,13 @@ I didn't know that you could remotely connect to a computer, that was new to me.
 
 --------------------------------------------------------------------------------------------------------------------------------
 LAB 3
+
+Part 1
 A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
 I am choosing the bug in arraymethods!
 These are the failure inducing inputs, junit tests
 `@Test
-public void testReverseInPlace-5() {
+public void testReverseInPlacefive() {
 int[] input1 = {1,2,3,4,5 };
 ArrayExamples.reverseInPlace(input1);
 assertArrayEquals(new int[]{5,4,3,2,1 }, input1);
@@ -78,11 +80,37 @@ assertArrayEquals(new int[]{5,4,3,2,1 }, input1);
 An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
 
 `@Test
-public void testReverseInPlace() {
-int[] input1 = {1,1, 1};
-assertArrayEquals(new int[]{1,1,1}, ArrayExamples.reversed(input1));
+public void testReverseInPlace-singular() {
+int[] input1 = {3};
+assertArrayEquals(new int[]{3}, ArrayExamples.reversed(input1));
 }
 `
 The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
+![Image](ArrayBugFailureLab3Report.png)
 The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
-Briefly describe why the fix addresses the issue.
+Before
+
+  `static void reverseInPlace(int[] arr) {
+    int[] newArray = arr;
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    
+  }`
+  
+After
+
+   `static void reverseInPlace(int[] arr) {
+    int[] newArray = arr;
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[arr.length - i - 1];
+    }
+    for(int i = 0; i < arr.length; i +=1){
+      arr[i] = newArray[i];
+    }
+    
+  }`
+  
+This fixes the problem because in the old version its trying to assign values from the array that hasn't been set yet to the old one. In this change I copy the values in the old array to the new one, reversed. Then copy it back. You can't do it all in one step because we need access to values on the flip side of the array.
+
+PART 2
