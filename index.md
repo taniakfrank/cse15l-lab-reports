@@ -98,9 +98,9 @@ Before
     
   }`
   
+  
 After
-
-   `static void reverseInPlace(int[] arr) {
+`static void reverseInPlace(int[] arr) {
     int[] newArray = arr;
     for(int i = 0; i < arr.length; i += 1) {
       newArray[i] = arr[arr.length - i - 1];
@@ -114,3 +114,58 @@ After
 This fixes the problem because in the old version its trying to assign values from the array that hasn't been set yet to the old one. In this change I copy the values in the old array to the new one, reversed. Then copy it back. You can't do it all in one step because we need access to values on the flip side of the array.
 
 PART 2
+-name
+SOURCE: man find in terminal
+`taniafrank@Tanias-MacBook-Air docsearch % find . -name "1468*.txt"
+./technical/biomed/1468-6708-3-10.txt
+./technical/biomed/1468-6708-3-4.txt
+./technical/biomed/1468-6708-3-7.txt
+./technical/biomed/1468-6708-3-3.txt
+./technical/biomed/1468-6708-3-1.txt
+taniafrank@Tanias-MacBook-Air docsearch % find . -name "911report"
+./technical/911report`
+
+This command simply finds the files that are named appropriately according to the name in the quotes. This is useful because you can see how many/what files exist according to your qualification, or even if they exist in the first place!
+
+-ls
+SOURCE: man find in terminal
+`taniafrank@Tanias-Air docsearch % find . -name  "1468-6708-3-1.txt" -ls
+4724554       48 -rwxr-xr-x    1 taniafrank       staff               24112 Oct 31 08:15 ./technical/biomed/1468-6708-3-1.txt
+taniafrank@Tanias-Air docsearch % find . -name  "biomed" -ls           
+4724553        0 drwxr-xr-x  839 taniafrank       staff               26848 Oct 31 08:15 ./technical/biomed
+`
+This command lists the full path and metainformation about whatever you are finding (in conjunction with the name command). this is incredibly helpful because it shows you exactly where the file is and information about it, in case you have lost it.
+
+-print
+SOURCE: https://www.liquidweb.com/kb/how-to-use-the-find-command-in-linux/#:~:text=Find%20a%20File%20or%20Directory,iname%20for%20case%20insensitive%20checks).&text=Here%20you%20use%20a%20period,to%20represent%20the%20current%20directory.
+
+`taniafrank@Tanias-Air docsearch % find . -name  "biomed" -print
+./technical/biomed
+taniafrank@Tanias-Air docsearch % find . -name  "1468-6708-3-1.txt" -prin
+t
+./technical/biomed/1468-6708-3-1.txt
+`
+This command prints out the full path name of the file when used with the -name command. This is helpful because it shows you the exact file path of a file, incase you lose it.
+
+-size
+SOURCE: https://www.liquidweb.com/kb/how-to-use-the-find-command-in-linux/#:~:text=Find%20a%20File%20or%20Directory,iname%20for%20case%20insensitive%20checks).&text=Here%20you%20use%20a%20period,to%20represent%20the%20current%20directory. 
+`taniafrank@Tanias-Air docsearch % find . -size -1
+./countingfiles.txt
+taniafrank@Tanias-Air docsearch % find . -size +400
+./lib/junit-4.13.2.jar
+./.git/objects/pack/pack-9155f305b04899d32718c159a69aedd038c25dbf.pack
+./technical/government/About_LSC/commission_report.txt
+./technical/government/Env_Prot_Agen/bill.txt
+./technical/government/Gen_Account_Office/GovernmentAuditingStandards_yb2002ed.txt
+./technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt
+./technical/government/Gen_Account_Office/d01591sp.txt
+./technical/911report/chapter-13.4.txt
+./technical/911report/chapter-13.5.txt
+./technical/911report/chapter-3.txt
+`
+This command lists out the files/packages that follow the qualification of what size qualifier you pick: +# means anything with a size larger than # and -# indicates smaller than. this is a qualifier for space.
+
+
+
+
+
