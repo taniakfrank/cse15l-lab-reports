@@ -61,3 +61,28 @@ PART 3
 I didn't know that you could remotely connect to a computer, that was new to me. My understanding for the most part was that we run things from the coputer we are physically on, so learning how to do that conceptually was cool. I suppose, specifically the ssh command and the process of logging into my cs15l account
 /Users/taniafrank/.ssh/id_rsa.pub
 
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+LAB 3
+A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
+I am choosing the bug in arraymethods!
+These are the failure inducing inputs, junit tests
+`@Test
+public void testReverseInPlace-5() {
+int[] input1 = {1,2,3,4,5 };
+ArrayExamples.reverseInPlace(input1);
+assertArrayEquals(new int[]{5,4,3,2,1 }, input1);
+}
+`
+An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
+
+`@Test
+public void testReverseInPlace() {
+int[] input1 = {1,1, 1};
+assertArrayEquals(new int[]{1,1,1}, ArrayExamples.reversed(input1));
+}
+`
+The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
+The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
+Briefly describe why the fix addresses the issue.
