@@ -198,6 +198,58 @@ taniafrank@Tanias-Air docsearch % find . -size +400
 
 This command lists out the files/packages that follow the qualification of what size qualifier you pick: +# means anything with a size larger than # and -# indicates smaller than. this is a qualifier for space.
 
+___________________________________________________________________________________________________________________________________
+LAB 4------------------------------------------------------------------------------------------------------------------------------
+STEPS:
+4. Log into ieng6
+![Image]()
+KEYS PRESSED: 
+"Ssh cs15lfa23fx@ieng6.ucsd.edu"
+<enter>
+
+5. Clone your fork of the repository from your Github account (using the SSH URL)
+![Image]()
+KEYS PRESSED: 
+"git clone git@github.com:taniakfrank/lab7.git"
+<enter>
+
+6. Run the tests, demonstrating that they fail
+![Image]()
+KEYS PRESSED: 
+"ls"
+<enter>
+"cd lab7"
+<enter>
+"bash test.sh"
+<enter>
+
+7. Edit the code file to fix the failing test
+![Image]()
+KEYS PRESSED: 
+"vim ListExamples.java"
+<down> x 43 times
+<right> x 12
+<delete>
+"2"
+<esc>
+":wq"
+<enter>
+
+8. Run the tests, demonstrating that they now succeed
+![Image]()
+KEYS PRESSED: 
+"bash test.sh"
+<enter>
+
+9. Commit and push the resulting change to your Github account (you can pick any commit message!)
+![Image]()
+KEYS PRESSED: 
+"git add ListExamples.java"
+<enter>
+"git commit -m 'yay' "
+<enter>
+"git push"
+<enter>
 
 
 
