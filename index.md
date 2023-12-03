@@ -204,7 +204,8 @@ STEPS:
 4. Log into ieng6
 ![Image](lab7-4)
 
-KEYS PRESSED: 
+KEYS/TYPED PRESSED: 
+
 "Ssh cs15lfa23fx@ieng6.ucsd.edu"
 
 `<enter>`
@@ -212,7 +213,8 @@ KEYS PRESSED:
 5. Clone your fork of the repository from your Github account (using the SSH URL)
 ![Image](lab7-5)
 
-KEYS PRESSED: 
+KEYS/TYPED PRESSED: 
+
 "git clone git@github.com:taniakfrank/lab7.git"
 
 `<enter>`
@@ -220,7 +222,8 @@ KEYS PRESSED:
 7. Run the tests, demonstrating that they fail
 ![Image](lab7-6)
 
-KEYS PRESSED: 
+KEYS/TYPED PRESSED: 
+
 "ls"
 
 `<enter>`
@@ -236,7 +239,8 @@ KEYS PRESSED:
 8. Edit the code file to fix the failing test
 ![Image](lab7-7)
 
-KEYS PRESSED: 
+KEYS/TYPED PRESSED:
+
 "vim ListExamples.java"
 `<down>`
 x 43 times
@@ -256,7 +260,8 @@ x 12 times
 9. Run the tests, demonstrating that they now succeed
 ![Image](lab7-8)
 
-KEYS PRESSED: 
+KEYS/TYPED PRESSED: 
+
 "bash test.sh"
 
 `<enter>`
