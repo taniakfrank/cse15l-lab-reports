@@ -206,82 +206,102 @@ STEPS:
 
 KEYS/TYPED PRESSED: 
 
-"Ssh cs15lfa23fx@ieng6.ucsd.edu"
+`ssh cs15lfa23fx@ieng6.ucsd.edu`
 
 `<enter>`
+
+EXPLANATION: I signed into the remote server using my ssh key. 
 
 5. Clone your fork of the repository from your Github account (using the SSH URL)
 ![Image](lab7-5)
 
 KEYS/TYPED PRESSED: 
 
-"git clone git@github.com:taniakfrank/lab7.git"
+`git clone git@github.com:taniakfrank/lab7.git`
 
 `<enter>`
+
+EXPLANATION: I cloned the lab 7 repo fork using my ssh url
 
 7. Run the tests, demonstrating that they fail
 ![Image](lab7-6)
 
 KEYS/TYPED PRESSED: 
 
-"ls"
+`ls`
 
 `<enter>`
 
-"cd lab7"
+`cd lab7`
 
 `<enter>`
 
-"bash test.sh"
+`bash test.sh`
 
 `<enter>`
+
+EXPLANATION: I used `ls` to see where i was then changed into the lab7 repo i just cloned. then i ran the listexamples test
+by running the bash script in lab 7
 
 8. Edit the code file to fix the failing test
 ![Image](lab7-7)
 
 KEYS/TYPED PRESSED:
 
-"vim ListExamples.java"
+`vim ListExamples.java`
+
 `<down>`
 x 43 times
+
 `<right>`
 x 12 times
 
+`i`
+
 `<delete>`
 
-"2"
+`2`
 
 `<esc>`
 
-":wq"
+`:wq`
 
 `<enter>`
+
+EXPLANATION: I entered vim by typing `vim ListExamples.java`, then pressed down cursor 43 times
+to get to the right line, and used the right button 12 times to be to the right of the correct character
+to fix. i entered insert mode by pressing `i`, and then deleted the 1 character and typed 
+2 to fix the bug. i pressed `esc` to exit insert mode, and exited vim. 
 
 9. Run the tests, demonstrating that they now succeed
 ![Image](lab7-8)
 
 KEYS/TYPED PRESSED: 
 
-"bash test.sh"
+`bash test.sh`
 
 `<enter>`
+
+EXPLANATION: same as step 7, i ran the listexamples test by running the bash script in lab 7
 
 10. Commit and push the resulting change to your Github account (you can pick any commit message!)
 ![Image](lab7-9)
 
 KEYS PRESSED: 
-"git add ListExamples.java"
+
+`git add ListExamples.java`
 
 `<enter>`
 
-"git commit -m 'yay' "
+`git commit -m "yay" `
 
 `<enter>`
 
-"git push"
+`git push`
 
 `<enter>`
 
-
+EXPLANATION: i committed my fix of the bug in `ListExamples.java` with the "yay" message, and pushed
+that to the github repo. 
 
 
