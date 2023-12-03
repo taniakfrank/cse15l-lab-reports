@@ -202,19 +202,19 @@ ________________________________________________________________________________
 LAB 4------------------------------------------------------------------------------------------------------------------------------
 STEPS:
 4. Log into ieng6
-![Image]([Screenshot 2023-12-02 at 6.51.02 PM.png]
+![Image](lab7-4.png)
 KEYS PRESSED: 
 "Ssh cs15lfa23fx@ieng6.ucsd.edu"
 <enter>
 
 5. Clone your fork of the repository from your Github account (using the SSH URL)
-![Image](Screenshot 2023-12-02 at 6.51.32 PM.png)
+![Image](lab7-5.png)
 KEYS PRESSED: 
 "git clone git@github.com:taniakfrank/lab7.git"
 <enter>
 
 6. Run the tests, demonstrating that they fail
-![Image](Screenshot 2023-12-02 at 6.51.41 PM.png)
+![Image](lab7-6.png)
 KEYS PRESSED: 
 "ls"
 <enter>
@@ -224,7 +224,7 @@ KEYS PRESSED:
 <enter>
 
 7. Edit the code file to fix the failing test
-![Image](Screenshot 2023-12-02 at 6.51.59 PM.png)
+![Image](lab7-7.png)
 KEYS PRESSED: 
 "vim ListExamples.java"
 <down> x 43 times
@@ -236,13 +236,13 @@ KEYS PRESSED:
 <enter>
 
 8. Run the tests, demonstrating that they now succeed
-![Image](Screenshot 2023-12-02 at 6.52.07 PM.png)
+![Image](lab7-8.png)
 KEYS PRESSED: 
 "bash test.sh"
 <enter>
 
 9. Commit and push the resulting change to your Github account (you can pick any commit message!)
-![Image](Screenshot 2023-12-02 at 6.52.15 PM.png)
+![Image](lab7-9.png)
 KEYS PRESSED: 
 "git add ListExamples.java"
 <enter>
