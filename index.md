@@ -313,11 +313,14 @@ PART 1
 ![Image](lab5-findingbug)
 
 
-2. TA
+
+3. TA
 ![Image](lab5-taadvice)
 
-3. STUDENT
+
+4. STUDENT
 ![Image](lab5-studentbug)
+
 
 The bug was that in the if statement making sure the index1 and index2 are within bound it checks if either is within index with OR operator `||` not the AND `&&` so only one of the indices had to be within the range. Thus the index of 1 or 2 may not have been within the List's range but was attempted to access because the other was when the tests were run
 
