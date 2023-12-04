@@ -310,13 +310,11 @@ LAB 5---------------------------------------------------------------------------
 
 PART 1
 1. STUDENT
-![Image](lab5-studentbug)
-
+![Image](lab5-studentbug-part1)
 
 
 3. TA
 ![Image](lab5-taadvice)
-
 
 4. STUDENT
 ![Image](lab5-findingbug)
