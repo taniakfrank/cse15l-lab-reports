@@ -310,20 +310,20 @@ LAB 5---------------------------------------------------------------------------
 
 PART 1
 1. STUDENT
-![Image]()
-![Image]()
+![Image](lab5-findingbug)
+
 
 2. TA
-![Image]()
+![Image](lab5-taresponse)
 
 3. STUDENT
-![Image]()
+![Image](lab5-studentbug)
 
 The bug was that in the if statement making sure the index1 and index2 are within bound it checks if either is within index with OR operator `||` not the AND `&&` so only one of the indices had to be within the range. Thus the index of 1 or 2 may not have been within the List's range but was attempted to access because the other was when the tests were run
 
 4. INFO
 FILE/DATA STRUCTURE
-![Image]()
+![Image](lab5-structure)
 
 COMMANDS RUN:
 1. failure showing:
@@ -444,3 +444,6 @@ Test.sh
 javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
 java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests
 ```
+
+PART 2: Reflection
+One really cool thing I learned is that you can access and change code from the terminal with vim! I had no ideas you could do that, and although it isn't helpful for big coding or large changes I see the value of being able to toggle through and access a file from the same place you are currently working (terminal). I am only used to text editors but knowing how many ways there are editing a file definitiely shifted my understanding of the software we use to code. 
