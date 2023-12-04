@@ -305,3 +305,142 @@ EXPLANATION: i committed my fix of the bug in `ListExamples.java` with the "yay"
 that to the github repo. 
 
 
+________________________________________________________________________________________________________________________________________________________________________________
+LAB 5---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PART 1
+1. STUDENT
+![Image]()
+![Image]()
+
+2. TA
+![Image]()
+
+3. STUDENT
+![Image]()
+
+The bug was that in the if statement making sure the index1 and index2 are within bound it checks if either is within index with OR operator `||` not the AND `&&` so only one of the indices had to be within the range. Thus the index of 1 or 2 may not have been within the List's range but was attempted to access because the other was when the tests were run
+
+4. INFO
+FILE/DATA STRUCTURE
+![Image]()
+
+COMMANDS RUN:
+1. failure showing:
+
+`bash test.sh`
+
+2. to find the bug as per TA advice:
+
+`vim ListExamples`
+
+`:28`
+
+HOW TO FIX THE BUG: 
+Student has to change the `||` to `&&` on Line 27. They can do this directly in the code, or through vim by going into vim mode:
+`vim ListExamples`
+
+navigating to line 27: `17`
+
+navigating right to appropriate spot with `<right>`
+
+entering insert mode: `i`
+
+deleting `||`: `<delete>`
+
+replacing: `&&`
+
+exiting insert: `<esc>`
+
+saving and exiting vim: `:wq`
+
+`<enter>`
+
+CONTENTS (Before fixing bug):
+ListExamples.java
+
+```
+import java.util.ArrayList;
+import java.util.List;
+
+interface StringChecker { boolean checkString(String s); }
+
+class ListExamples {
+
+  // Returns a new list that has all the elements of the input list for which
+  // the StringChecker returns true, and not the elements that return false, in
+  // the same order they appeared in the input list;
+  static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(0, s);
+      }
+    }
+    return result;
+  }
+
+
+  // Takes two sorted list of strings (so "a" appears before "b" and so on),
+  // and return a new list that has all the strings in both list in sorted order.
+  static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() || index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+    }
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      // change index1 below to index2 to fix test
+      index2 += 1;
+    }
+    return result;
+  }
+
+
+}
+```
+
+ListExamplesTests.java
+
+```
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.util.*;
+import java.util.ArrayList;
+
+
+public class ListExamplesTests {
+	@Test(timeout = 500)
+	public void testMerge1() {
+    		List<String> l1 = new ArrayList<String>(Arrays.asList("x", "y"));
+		List<String> l2 = new ArrayList<String>(Arrays.asList("a", "b"));
+		assertArrayEquals(new String[]{ "a", "b", "x", "y"}, ListExamples.merge(l1, l2).toArray());
+	}
+	
+	@Test(timeout = 500)
+        public void testMerge2() {
+		List<String> l1 = new ArrayList<String>(Arrays.asList("a", "b", "c"));
+		List<String> l2 = new ArrayList<String>(Arrays.asList("c", "d", "e"));
+		assertArrayEquals(new String[]{ "a", "b", "c", "c", "d", "e" }, ListExamples.merge(l1, l2).toArray());
+        }
+}
+```
+
+Test.sh
+
+```
+javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests
+```
