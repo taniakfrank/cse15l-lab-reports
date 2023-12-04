@@ -314,7 +314,7 @@ PART 1
 
 
 2. TA
-![Image](lab5-taresponse)
+![Image](lab5-taadvice)
 
 3. STUDENT
 ![Image](lab5-studentbug)
